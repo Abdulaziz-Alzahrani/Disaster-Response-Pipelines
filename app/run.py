@@ -38,15 +38,14 @@ model = joblib.load("../models/Classifier.pickle")
 @app.route('/index')
 def index():
     
-    
-    class_names = df.iloc[:, 4:].columns
-    class_count = df.iloc[:,4:].sum()
+    # First visual data
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
-    # create visuals
-    # TODO: Below is an example - modify to create your own visuals
-   
+    #Second visual data
+    class_names = df.iloc[:, 4:].columns
+    class_count = df.iloc[:,4:].sum()
+    
     # create visuals
     graphs = [
         {
