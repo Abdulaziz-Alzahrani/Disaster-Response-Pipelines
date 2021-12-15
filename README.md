@@ -1,7 +1,12 @@
 # Disaster-Response-Pipelines
 
 ## Project Summary:
-This project focuses on building a "Disaster Response Pipeline", which classifies disaster messages.
+Disaster response is important where governments and companies take such matter seriously as it can save people,properties, etc...
+So giving people, governments and companies a heads up when a disaster occures is very important, as the appropiate action to the 
+specific type of disaster results in higher readiness, better warnings, and decreased susceptibility.
+
+This project focuses on building a "Disaster Response Pipeline", which classifies disaster messages by filtering messages, tweets and any text
+put on social media into categories using a supervised machine learning model trained on `Figure Eight` dataset.
 This project is made from three components which are:
 ### A) ETL Pipeline:
 In this section the data is extracted from two datasets where it gets merged, cleaned and stored in SQLite database.
