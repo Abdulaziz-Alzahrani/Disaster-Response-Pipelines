@@ -7,6 +7,7 @@ specific type of disaster results in higher readiness, better warnings, and decr
 
 This project focuses on building a "Disaster Response Pipeline", which classifies disaster messages by filtering messages, tweets and any text
 put on social media into categories using a supervised machine learning model trained on a dataset from "Figure Eight".
+
 This project is made from three components which are:
 ### A) ETL Pipeline:
 In this section the data is extracted from two datasets where it gets merged, cleaned and stored in SQLite database.
