@@ -1,9 +1,9 @@
 # Disaster-Response-Pipelines
 
 ## Project Summary:
-Disaster response is important where governments and companies give take such matter seriously as it can save people,properties, etc...
-So giving people, governments and companies a heads up when a disaster occures is very important.
-The appropiate action at the specific type of disaster stages results in higher readiness, better warnings, and decreased susceptibility.
+Disaster response is important where governments and companies take such matter seriously as it can save people,properties, etc...
+So giving people, governments and companies a heads up when a disaster occures is very important, as the appropiate action to the 
+specific type of disaster results in higher readiness, better warnings, and decreased susceptibility.
 
 This project focuses on building a "Disaster Response Pipeline", which classifies disaster messages by filtering messages, tweets and any text
 put on social media into categories using a supervised machine learning model trained on `Figure Eight` dataset.
