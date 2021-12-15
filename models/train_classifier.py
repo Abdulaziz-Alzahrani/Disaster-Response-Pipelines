@@ -9,7 +9,7 @@ import re
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 nltk.download(['punkt', 'stopwords', 'wordnet'])
 # Modling related libraries
 from sklearn.pipeline import Pipeline
@@ -54,10 +54,11 @@ def tokenize(text):
     # tokenize the text
     text = word_tokenize(text)
     # removing stopping words
-    text = [word for word in text if word not in stopwords.words('english')]
+    stop_words = set(stopwords.words('english'))
+    text = [word for word in text if word not in stop_words]
     # stemm the text
-    stemmer = PorterStemmer()
-    text = [stemmer.stem(word) for word in text]
+    lemmatizer = WordNetLemmatizer()
+    text = [lemmatizer.lemmatize(word=word) for word in text]
     
     return text
 

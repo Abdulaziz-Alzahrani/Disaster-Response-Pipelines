@@ -39,21 +39,44 @@ model = joblib.load("../models/Classifier.pickle")
 def index():
     
     
-    names = df.iloc[:, 4:].columns
-    count = df.iloc[:,4:].sum()
+    class_names = df.iloc[:, 4:].columns
+    class_count = df.iloc[:,4:].sum()
+    genre_counts = df.groupby('genre').count()['message']
+    genre_names = list(genre_counts.index)
     
+    # create visuals
+    # TODO: Below is an example - modify to create your own visuals
+   
     # create visuals
     graphs = [
         {
             'data': [
                 Bar(
-                    x=names,
-                    y=count
+                    x=genre_names,
+                    y=genre_counts
                 )
             ],
 
             'layout': {
                 'title': 'Distribution of Message Genres',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=class_names,
+                    y=class_count
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Classes',
                 'yaxis': {
                     'title': "Count"
                 },
